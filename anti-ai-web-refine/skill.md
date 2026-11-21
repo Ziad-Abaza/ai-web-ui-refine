@@ -1,4 +1,6 @@
 ---
+noteId: "4b800b10e59011f1ba4411e04ee48923"
+tags: []
 name: "anti-ai-web-refine"
 description: "Review and refine an existing website or landing page so it looks designed for its brand instead of AI-generated. Audits 28 AI-design tells (purple gradients, gradient headlines, emoji headings, identical card rows, badges above every heading, stock fonts, stock copy, scroll animations, weak contrast, em dashes and more) with a linter, then redesigns with a brand-derived palette, type scale, and layout while preserving content and functionality. Includes RTL and Arabic handling. Use whenever the user wants a site to stop looking AI-made, generic, templated, or \"like every AI landing page\", asks to polish, review, critique, or refine a website design, or says things like \"يبان إنه عمل AI\", \"الموقع شكله generic\", \"حسّن تصميم الموقع\", even if they never name these patterns."
 

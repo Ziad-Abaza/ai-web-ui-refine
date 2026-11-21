@@ -1,0 +1,679 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمصة الميزان | حبوب بن مختصة من مستودع جمارك الإسكندرية (1968)</title>
+  <!-- Bespoke Typography: Newsreader & IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 
+      BRAND-FIRST REFINED DESIGN SYSTEM
+      Brand: محمصة الميزان (Al-Mizan Roastery)
+      Visual Concept: دفتر جمرك ميناء الإسكندرية وسجلات التحميص اليدوي لعام 1968
+    */
+    :root {
+      /* 4px Spacing Tokens */
+      --sp-1: 4px;
+      --sp-2: 8px;
+      --sp-3: 12px;
+      --sp-4: 16px;
+      --sp-6: 24px;
+      --sp-8: 32px;
+      --sp-12: 48px;
+      --sp-16: 64px;
+      --sp-24: 96px;
+
+      /* Brand-Derived Color Palette (Coffee, Copper, Harbour Stone) */
+      --color-bg: #F9F7F2;
+      --color-surface: #FFFFFF;
+      --color-surface-subtle: #F1ECE1;
+      --color-espresso: #181310;
+      --color-espresso-soft: #38312B;
+      --color-copper: #B85226;
+      --color-copper-dark: #933C15;
+      --color-copper-light: #F4E8E1;
+      --color-maritime: #1F362B;
+      --color-border: #E2DACB;
+      --color-border-dark: #C5BAA5;
+      
+      /* Typography Scales */
+      --font-display: 'Amiri', 'Newsreader', Georgia, serif;
+      --font-body: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    [lang="en"] {
+      --font-display: 'Newsreader', Georgia, serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Reset & Clean Box Model */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-espresso);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Surgical Transitions Only on Desired Properties */
+    a, button {
+      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+
+    /* Explicit Focus-Visible Style for Keyboard Navigation */
+    :focus-visible {
+      outline: 2px solid var(--color-copper);
+      outline-offset: 3px;
+    }
+
+    /* Prefer Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Structural Container with Logical Properties */
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin-inline: auto;
+      padding-inline: var(--sp-6);
+    }
+
+    /* Header & Navigation */
+    header {
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding-block: var(--sp-4);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--sp-4);
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: baseline;
+      gap: var(--sp-3);
+      text-decoration: none;
+      color: var(--color-espresso);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: normal; /* No letter spacing on Arabic! */
+    }
+
+    .brand-est {
+      font-size: 12px;
+      color: var(--color-copper);
+      font-weight: 600;
+      border: 1px solid var(--color-copper-light);
+      background: var(--color-copper-light);
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+    }
+
+    .lang-toggle {
+      background: none;
+      border: 1px solid var(--color-border);
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--color-espresso-soft);
+      border-radius: 4px;
+    }
+    .lang-toggle:hover {
+      background: var(--color-surface-subtle);
+    }
+
+    /* Hero Section: Editorial & Asymmetric */
+    .hero {
+      padding-block: var(--sp-16) var(--sp-12);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: var(--sp-12);
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-8);
+      }
+    }
+
+    .hero-content {
+      text-align: start;
+    }
+
+    .batch-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-maritime);
+      margin-bottom: var(--sp-3);
+      border-inline-start: 3px solid var(--color-maritime);
+      padding-inline-start: var(--sp-2);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.2vw, 52px);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--color-espresso);
+      margin-bottom: var(--sp-6);
+    }
+
+    .hero-description {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--color-espresso-soft);
+      margin-bottom: var(--sp-8);
+      max-width: 580px;
+    }
+
+    .action-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--sp-4);
+    }
+
+    /* Outcome-Based Primary Action Button */
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-copper);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 24px;
+      text-decoration: none;
+      border: 1px solid var(--color-copper);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background: var(--color-copper-dark);
+      border-color: var(--color-copper-dark);
+      color: #FFFFFF;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--color-espresso);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 22px;
+      text-decoration: none;
+      border: 1px solid var(--color-border-dark);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-outline:hover {
+      background: var(--color-surface-subtle);
+    }
+
+    /* Visual Idea: The Customs Batch Stamp & Card */
+    .ledger-stamp-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: var(--sp-6);
+      box-shadow: 0 4px 16px rgba(24, 19, 16, 0.04);
+      position: relative;
+    }
+
+    .ledger-stamp-card::before {
+      content: "سجل الفحص رقم ٤٢";
+      position: absolute;
+      inset-inline-end: var(--sp-4);
+      top: var(--sp-4);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-copper);
+      border: 1px dashed var(--color-copper);
+      padding: 2px 6px;
+      transform: rotate(-3deg);
+    }
+
+    .ledger-detail-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted var(--color-border);
+      padding-block: var(--sp-2);
+      font-size: 14px;
+    }
+
+    .ledger-detail-row .label {
+      color: var(--color-espresso-soft);
+    }
+
+    .ledger-detail-row .value {
+      font-weight: 600;
+      color: var(--color-espresso);
+    }
+
+    /* Sourcing Table (Prices & Specs in a Real Ledger Table) */
+    .section-ledger {
+      padding-block: var(--sp-16);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .section-head {
+      margin-bottom: var(--sp-8);
+      text-align: start;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      line-height: 1.3;
+      color: var(--color-espresso);
+      margin-bottom: var(--sp-2);
+    }
+
+    .section-head p {
+      color: var(--color-espresso-soft);
+      font-size: 16px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    table.lots-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: start;
+      font-size: 14px;
+    }
+
+    table.lots-table th {
+      background: var(--color-surface-subtle);
+      color: var(--color-espresso);
+      font-weight: 600;
+      padding: var(--sp-3) var(--sp-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+    }
+
+    table.lots-table td {
+      padding: var(--sp-4);
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: middle;
+    }
+
+    table.lots-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .lot-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--color-espresso);
+      display: block;
+    }
+
+    .lot-sub {
+      font-size: 12px;
+      color: var(--color-espresso-soft);
+    }
+
+    .price-tag {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--color-copper);
+      white-space: nowrap;
+    }
+
+    /* Craftsmanship Editorial Story (Asymmetrical 2-Column) */
+    .section-craft {
+      padding-block: var(--sp-16);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .craft-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-12);
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .craft-layout {
+        grid-template-columns: 1fr;
+        gap: var(--sp-8);
+      }
+    }
+
+    .craft-text h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      line-height: 1.35;
+      margin-bottom: var(--sp-4);
+      color: var(--color-espresso);
+    }
+
+    .craft-text p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--color-espresso-soft);
+      margin-bottom: var(--sp-4);
+    }
+
+    .quote-card {
+      background: var(--color-maritime);
+      color: #F9F7F2;
+      padding: var(--sp-8);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .quote-card blockquote {
+      font-family: var(--font-display);
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: var(--sp-4);
+    }
+
+    .quote-card cite {
+      display: block;
+      font-style: normal;
+      font-size: 13px;
+      color: #C2D6CC;
+      font-weight: 500;
+    }
+
+    /* Footer: Functional & Clean */
+    footer {
+      background: var(--color-espresso);
+      color: #C5BAA5;
+      padding-block: var(--sp-12);
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-6);
+      align-items: center;
+    }
+
+    .footer-copy {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clean, Purposeful Top Header -->
+  <header>
+    <div class="container top-bar">
+      <a href="#" class="brand-mark">
+        <span class="brand-title" id="txt-title">محمصة الميزان</span>
+        <span class="brand-est">تأسست ١٩٦٨</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" onclick="toggleLang()" id="btn-lang">English</button>
+        <a href="#lots" class="btn-action" style="padding: 8px 16px; font-size: 13px;" id="txt-nav-cta">حجز من الدفعة</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="batch-tag" id="txt-hero-tag">دفعة التحميص الأسبوعية رقم ٤٢ • ميناء الإسكندرية</span>
+        <h1 id="txt-hero-h1">قهوة مختصة مُحمصة يدويًا على ماكينة بروبات ١٩٦٨</h1>
+        <p class="hero-description" id="txt-hero-desc">
+          نستقبل حبوب البن الخضراء مباشرة من مزارع إثيوبيا وكولومبيا في مستودع جمارك الإسكندرية القديم. نُحمّص دفعات محدودة صباح كل ثلاثاء، ونشحنها إلى المقاهي والمنازل يوم الخميس في أوج نضارتها.
+        </p>
+
+        <div class="action-group">
+          <a href="#lots" class="btn-action" id="txt-hero-cta">احجز تحميصة الدفعة 42 (الشحن الخميس)</a>
+          <a href="#craft" class="btn-outline" id="txt-hero-subcta">سجل التحميص ومصدر الحبوب</a>
+        </div>
+      </div>
+
+      <!-- Customs Slip Detail (Visual Identity Rooted in the Roastery's Origin) -->
+      <aside class="ledger-stamp-card">
+        <div class="ledger-detail-row">
+          <span class="label" id="lbl-roaster">آلة التحميص</span>
+          <span class="value">Probat UG22 (موديل 1968)</span>
+        </div>
+        <div class="ledger-detail-row">
+          <span class="label" id="lbl-location">الموقع الجمركي</span>
+          <span class="value">رصيف ٤، ميناء الإسكندرية</span>
+        </div>
+        <div class="ledger-detail-row">
+          <span class="label" id="lbl-schedule">موعد التحميص</span>
+          <span class="value">كل ثلاثاء (٠٦:٠٠ صباحًا)</span>
+        </div>
+        <div class="ledger-detail-row">
+          <span class="label" id="lbl-dispatch">موعد الشحن</span>
+          <span class="value">الخميس أسبوعيًا بجميع المحافظات</span>
+        </div>
+        <div class="ledger-detail-row">
+          <span class="label" id="lbl-status">حالة الحجز للدفعة</span>
+          <span class="value" style="color: var(--color-copper);">متبقي 18 كيس فقط</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Section: Sourcing Ledger (Prices & Specs in Table, NOT Cards) -->
+  <section class="section-ledger" id="lots">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="txt-lots-h2">سجل المحاصيل المتاحة للدفعة الحالية</h2>
+        <p id="txt-lots-sub">بيانات كاملة وشفافة عن كل محصول: الارتفاع، المعالجة، ونوتات التذوق الفردية.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="lots-table">
+          <thead>
+            <tr>
+              <th id="th-lot">المحصول والمصدر</th>
+              <th id="th-alt">الارتفاع</th>
+              <th id="th-process">المعالجة</th>
+              <th id="th-notes">إيحاءات التذوق</th>
+              <th id="th-price">السعر (كيس 250 جم)</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="lot-name">إثيوبيا: يرجاشيفي G1</span>
+                <span class="lot-sub">منطقة غيديب، مزارع أيديدو</span>
+              </td>
+              <td>2,150 متر</td>
+              <td>عسلية لا هوائية</td>
+              <td>برغموت، ياسمين، تين مجفف</td>
+              <td class="price-tag">480 ج.م</td>
+              <td><a href="#order" class="btn-action" style="padding: 6px 14px; font-size: 13px;">طلب الكيس</a></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lot-name">كولومبيا: هويلا بينك بوربون</span>
+                <span class="lot-sub">مزرعة إل بارايسو، بيتاليتو</span>
+              </td>
+              <td>1,850 متر</td>
+              <td>مغسولة بالكامل</td>
+              <td>برتقال ياقوتي، زبدة بنية، كراميل</td>
+              <td class="price-tag">520 ج.م</td>
+              <td><a href="#order" class="btn-action" style="padding: 6px 14px; font-size: 13px;">طلب الكيس</a></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lot-name">إثيوبيا: سيداما بينسا</span>
+                <span class="lot-sub">محطة بومي ووركاشا</span>
+              </td>
+              <td>2,000 متر</td>
+              <td>مجففة طبيعية</td>
+              <td>توت بري أسود، كاكاو خام</td>
+              <td class="price-tag">460 ج.م</td>
+              <td><a href="#order" class="btn-action" style="padding: 6px 14px; font-size: 13px;">طلب الكيس</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Section: Craft Story & Attributed Proof -->
+  <section class="section-craft" id="craft">
+    <div class="container craft-layout">
+      <div class="craft-text">
+        <h3 id="txt-craft-h3">لا أسرار تجارية. فقط برميل تحميص حديدي وخبرة نصف قرن.</h3>
+        <p id="txt-craft-p1">
+          أسس المعلم عبد الصمد الميزان المحمصة عام ١٩٦٨ بجوار بوابة جمرك ميناء الإسكندرية لاستلام جوالات الخيش فور تفريغها من السفن القادمة من شرق إفريقيا وأمريكا اللاتينية.
+        </p>
+        <p id="txt-craft-p2">
+          ما زلنا نعمل بنفس ماكينة البروبات المصنوعة من الحديد الزهر الألماني، ونعتمد على التقييم الحسي لدرجات الحرارة بدون تلاعب أو إضافات صناعية.
+        </p>
+      </div>
+
+      <!-- Real, Attributed Testimonial (No anonymous single names) -->
+      <div class="quote-card">
+        <blockquote id="txt-quote">
+          "محمصة الميزان تورد البن لفرعي مقهى الميناء في الإسكندرية منذ أربع سنوات. دفعات الإثيوبي لديهم لا تحتوي على عيب واحد، وثبات الاستخلاص يومي."
+        </blockquote>
+        <cite id="txt-cite">بقلم: طارق نور، رئيس باريستا بمقهى الميناء، محطة الرمل</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-copy">
+        <strong>محمصة الميزان للقهوة المختصة</strong> | مستودع جمارك ٤، ميناء الإسكندرية، جمهورية مصر العربية.<br>
+        سجل تجاري رقم ٤٨٢٠١ الإسكندرية.
+      </div>
+      <div>
+        <span>جميع الحقوق محفوظة © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Bilingual Switcher Script for Live Testing
+    let currentLang = 'ar';
+    function toggleLang() {
+      const html = document.documentElement;
+      if (currentLang === 'ar') {
+        currentLang = 'en';
+        html.lang = 'en';
+        html.dir = 'ltr';
+        document.getElementById('btn-lang').textContent = 'العربية';
+        
+        document.getElementById('txt-title').textContent = 'Al-Mizan Roastery';
+        document.getElementById('txt-nav-cta').textContent = 'Reserve Batch';
+        document.getElementById('txt-hero-tag').textContent = 'Weekly Roast Batch #42 • Alexandria Customs Harbour';
+        document.getElementById('txt-hero-h1').textContent = 'Handcrafted Specialty Coffee on a 1968 Cast Iron Probat';
+        document.getElementById('txt-hero-desc').textContent = 'We receive raw green coffee lots directly at Alexandria’s historic customs warehouse from Ethiopia and Colombia. Roasted in strictly limited batches every Tuesday morning, and dispatched Thursdays at peak freshness.';
+        document.getElementById('txt-hero-cta').textContent = 'Reserve Batch #42 (Dispatches Thursday)';
+        document.getElementById('txt-hero-subcta').textContent = 'View Lots & Roast Specs';
+
+        document.getElementById('lbl-roaster').textContent = 'Roaster';
+        document.getElementById('lbl-location').textContent = 'Port Facility';
+        document.getElementById('lbl-schedule').textContent = 'Roast Day';
+        document.getElementById('lbl-dispatch').textContent = 'Dispatch Day';
+        document.getElementById('lbl-status').textContent = 'Batch Status';
+
+        document.getElementById('txt-lots-h2').textContent = 'Current Available Coffee Lots';
+        document.getElementById('txt-lots-sub').textContent = 'Transparent lot specifications: elevation, processing method, and cupping profile.';
+        document.getElementById('th-lot').textContent = 'Lot & Origin';
+        document.getElementById('th-alt').textContent = 'Elevation';
+        document.getElementById('th-process').textContent = 'Processing';
+        document.getElementById('th-notes').textContent = 'Tasting Notes';
+        document.getElementById('th-price').textContent = 'Price (250g bag)';
+
+        document.getElementById('txt-craft-h3').textContent = 'No trade secrets. Just a cast-iron drum and fifty years of salt air.';
+        document.getElementById('txt-craft-p1').textContent = 'Founded in 1968 by Abdel Samad Al-Mizan beside Alexandria Port gate #4 to receive green jute bags fresh off arriving cargo vessels from East Africa and South America.';
+        document.getElementById('txt-craft-p2').textContent = 'We roast on the same German cast-iron Probat UG22 drum roaster, relying on sensory temperature monitoring with zero artificial flavor enhancers.';
+        document.getElementById('txt-quote').textContent = '"Al-Mizan supplies our Alexandria coffee bars every Tuesday morning. Their Ethiopian lots have zero defects, and shot extraction stability is remarkable."';
+        document.getElementById('txt-cite').textContent = 'By: Tarek Nour, Head Barista at Qahwet El-Mina, Raml Station';
+      } else {
+        currentLang = 'ar';
+        html.lang = 'ar';
+        html.dir = 'rtl';
+        document.getElementById('btn-lang').textContent = 'English';
+        
+        document.getElementById('txt-title').textContent = 'محمصة الميزان';
+        document.getElementById('txt-nav-cta').textContent = 'حجز من الدفعة';
+        document.getElementById('txt-hero-tag').textContent = 'دفعة التحميص الأسبوعية رقم ٤٢ • ميناء الإسكندرية';
+        document.getElementById('txt-hero-h1').textContent = 'قهوة مختصة مُحمصة يدويًا على ماكينة بروبات ١٩٦٨';
+        document.getElementById('txt-hero-desc').textContent = 'نستقبل حبوب البن الخضراء مباشرة من مزارع إثيوبيا وكولومبيا في مستودع جمارك الإسكندرية القديم. نُحمّص دفعات محدودة صباح كل ثلاثاء، ونشحنها إلى المقاهي والمنازل يوم الخميس في أوج نضارتها.';
+        document.getElementById('txt-hero-cta').textContent = 'احجز تحميصة الدفعة 42 (الشحن الخميس)';
+        document.getElementById('txt-hero-subcta').textContent = 'سجل التحميص ومصدر الحبوب';
+
+        document.getElementById('lbl-roaster').textContent = 'آلة التحميص';
+        document.getElementById('lbl-location').textContent = 'الموقع الجمركي';
+        document.getElementById('lbl-schedule').textContent = 'موعد التحميص';
+        document.getElementById('lbl-dispatch').textContent = 'موعد الشحن';
+        document.getElementById('lbl-status').textContent = 'حالة الحجز للدفعة';
+
+        document.getElementById('txt-lots-h2').textContent = 'سجل المحاصيل المتاحة للدفعة الحالية';
+        document.getElementById('txt-lots-sub').textContent = 'بيانات كاملة وشفافة عن كل محصول: الارتفاع، المعالجة، ونوتات التذوق الفردية.';
+        document.getElementById('th-lot').textContent = 'المحصول والمصدر';
+        document.getElementById('th-alt').textContent = 'الارتفاع';
+        document.getElementById('th-process').textContent = 'المعالجة';
+        document.getElementById('th-notes').textContent = 'إيحاءات التذوق';
+        document.getElementById('th-price').textContent = 'السعر (كيس 250 جم)';
+
+        document.getElementById('txt-craft-h3').textContent = 'لا أسرار تجارية. فقط برميل تحميص حديدي وخبرة نصف قرن.';
+        document.getElementById('txt-craft-p1').textContent = 'أسس المعلم عبد الصمد الميزان المحمصة عام ١٩٦٨ بجوار بوابة جمرك ميناء الإسكندرية لاستلام جوالات الخيش فور تفريغها من السفن القادمة من شرق إفريقيا وأمريكا اللاتينية.';
+        document.getElementById('txt-craft-p2').textContent = 'ما زلنا نعمل بنفس ماكينة البروبات المصنوعة من الحديد الزهر الألماني، ونعتمد على التقييم الحسي لدرجات الحرارة بدون تلاعب أو إضافات صناعية.';
+        document.getElementById('txt-quote').textContent = '"محمصة الميزان تورد البن لفرعي مقهى الميناء في الإسكندرية منذ أربع سنوات. دفعات الإثيوبي لديهم لا تحتوي على عيب واحد، وثبات الاستخلاص يومي."';
+        document.getElementById('txt-cite').textContent = 'بقلم: طارق نور، رئيس باريستا بمقهى الميناء، محطة الرمل';
+      }
+    }
+  </script>
+</body>
+</html>
+
