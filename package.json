@@ -1,47 +1,11 @@
 {
   "name": "ai-web-ui-refine",
   "version": "1.0.0",
-  "description": "Audit 28 AI web design clichés and build authentic, brand-first websites. Automated linter and skills for Antigravity, Claude Code, Cursor, and Windsurf.",
-  "main": "bin/cli.js",
+  "description": "Audit 28 AI web design tells and build authentic, brand-first websites. Skills and linter for Antigravity, Claude Code, Cursor, and .agents.",
+  "type": "module",
   "bin": {
-    "ai-web-ui-refine": "./bin/cli.js",
-    "anti-ai-web": "./bin/cli.js"
-  },
-  "scripts": {
-    "test": "node bin/cli.js lint examples/after/index.html",
-    "lint": "node bin/cli.js lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ziad-Abaza/ai-web-ui-refine.git"
-  },
-  "keywords": [
-    "ai",
-    "anti-ai",
-    "web-design",
-    "linter",
-    "antigravity",
-    "antigravity-skills",
-    "claude-code",
-    "claude-skills",
-    "cursor",
-    "cursor-rules",
-    "windsurf",
-    "brand-first",
-    "frontend",
-    "design-tokens",
-    "rtl",
-    "arabic-web",
-    "accessibility"
-  ],
-  "author": "Ziad Abaza <zeyad.h.abaza@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Ziad-Abaza/ai-web-ui-refine/issues"
-  },
-  "homepage": "https://github.com/Ziad-Abaza/ai-web-ui-refine#readme",
-  "engines": {
-    "node": ">=16.0.0"
+    "ai-web-ui-refine": "bin/install.mjs",
+    "anti-ai-web": "bin/install.mjs"
   },
   "files": [
     "bin",
@@ -51,7 +15,34 @@
     "brand-first-web-build",
     "examples",
     "assets",
+    "install.sh",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "keywords": [
+    "ai-skill",
+    "antigravity-skills",
+    "claude-skill",
+    "agents-skills",
+    "cursor-rules",
+    "web-design",
+    "anti-ai",
+    "brand-first",
+    "linter",
+    "rtl",
+    "arabic-web"
+  ],
+  "author": "Ziad Abaza <zeyad.h.abaza@gmail.com> (https://github.com/Ziad-Abaza)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ziad-Abaza/ai-web-ui-refine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ziad-Abaza/ai-web-ui-refine/issues"
+  },
+  "homepage": "https://github.com/Ziad-Abaza/ai-web-ui-refine#readme",
+  "engines": {
+    "node": ">=16"
+  }
 }

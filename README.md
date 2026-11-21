@@ -1,9 +1,3 @@
----
-noteId: "740c2e50e59111f1ba4411e04ee48923"
-tags: []
-
----
-
 # 🎨 Anti-AI Web Refine & Brand-First Web Build
 
 > **Audit 28 recognizable AI design clichés and build authentic, human-crafted websites rooted in brand identity.**  
@@ -131,21 +125,54 @@ Our linter inspects static HTML and CSS against **28 distinct AI design tells**,
 
 ## 🚀 How to Install & Use
 
-### ⚡ Quick Start via NPM / NPX (Zero Setup)
+### One-Command Install (Recommended)
 
-You can run the audit tool instantly or install the skills into your AI assistant with a single command:
+**Node.js / npx** — runs straight from GitHub, zero npm publish required:
 
 ```bash
-# Run the interactive installer (sets up Antigravity, Claude, Cursor, or Windsurf)
-npx ai-web-ui-refine init
+# Global (all projects): ~/.agents/skills & ~/.gemini/antigravity-cli/skills
+npx -y github:Ziad-Abaza/ai-web-ui-refine
 
-# Audit an existing HTML file directly
-npx ai-web-ui-refine lint path/to/index.html
+# Inside a specific project directory: <project>/.agents/skills
+npx -y github:Ziad-Abaza/ai-web-ui-refine --project
 
-# Export the brand direction worksheet
-npx ai-web-ui-refine worksheet
+# Specific agent runtimes
+npx -y github:Ziad-Abaza/ai-web-ui-refine --antigravity   # ~/.gemini/antigravity-cli/skills
+npx -y github:Ziad-Abaza/ai-web-ui-refine --claude        # ~/.claude/skills
+npx -y github:Ziad-Abaza/ai-web-ui-refine --cursor        # ./.cursor/skills & ./.cursor/rules
+npx -y github:Ziad-Abaza/ai-web-ui-refine --dir /custom/path
 
-# Install globally on your system (optional)
+# Audit an HTML file directly
+npx -y github:Ziad-Abaza/ai-web-ui-refine lint path/to/index.html
+
+# Export brand direction worksheet
+npx -y github:Ziad-Abaza/ai-web-ui-refine worksheet
+
+# Update / force reinstall / uninstall
+npx -y github:Ziad-Abaza/ai-web-ui-refine --force
+npx -y github:Ziad-Abaza/ai-web-ui-refine --uninstall
+```
+
+**curl \| bash** — no Node.js required:
+
+```bash
+# Global install:
+curl -fsSL https://raw.githubusercontent.com/Ziad-Abaza/ai-web-ui-refine/main/install.sh | bash
+
+# Project-scoped install:
+curl -fsSL https://raw.githubusercontent.com/Ziad-Abaza/ai-web-ui-refine/main/install.sh | bash -s -- --project
+
+# Specific agent:
+curl -fsSL https://raw.githubusercontent.com/Ziad-Abaza/ai-web-ui-refine/main/install.sh | bash -s -- --antigravity
+curl -fsSL https://raw.githubusercontent.com/Ziad-Abaza/ai-web-ui-refine/main/install.sh | bash -s -- --claude
+```
+
+---
+
+### If Published on NPM
+
+```bash
+npx ai-web-ui-refine
 npm install -g ai-web-ui-refine
 ```
 
