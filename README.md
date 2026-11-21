@@ -10,6 +10,8 @@ tags: []
 > *Stop shipping purple gradients, generic 3-card grids, Inter font defaults, and hollow buzzwords.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-cb3837.svg)](https://www.npmjs.com/package/ai-web-ui-refine)
+[![npx instant run](https://img.shields.io/badge/npx-ai--web--ui--refine-555555.svg)](#-how-to-install--use)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-brightgreen.svg)](#-automated-linter--tooling)
 [![WCAG AAA Ready](https://img.shields.io/badge/Accessibility-WCAG%20AAA-orange.svg)](#-the-28-ai-design-tells)
@@ -129,7 +131,27 @@ Our linter inspects static HTML and CSS against **28 distinct AI design tells**,
 
 ## 🚀 How to Install & Use
 
-You can use these skills across **any** modern AI development environment:
+### ⚡ Quick Start via NPM / NPX (Zero Setup)
+
+You can run the audit tool instantly or install the skills into your AI assistant with a single command:
+
+```bash
+# Run the interactive installer (sets up Antigravity, Claude, Cursor, or Windsurf)
+npx ai-web-ui-refine init
+
+# Audit an existing HTML file directly
+npx ai-web-ui-refine lint path/to/index.html
+
+# Export the brand direction worksheet
+npx ai-web-ui-refine worksheet
+
+# Install globally on your system (optional)
+npm install -g ai-web-ui-refine
+```
+
+---
+
+### Manual Setup by Environment
 
 ### 1. In Antigravity CLI / IDE
 Copy the skill folders into your global Antigravity skills directory or your project workspace:
